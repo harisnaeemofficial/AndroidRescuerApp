@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        android:paddingTop="16dp">
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/rtLoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:switchTextAppearance="@style/BlackText"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:background="?selectableItemBackground"
+            android:text="@string/rlt" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/locWP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:switchTextAppearance="@style/BlackText"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:background="?selectableItemBackground"
+            android:text="@string/loc_on_wong_pass" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/photoWP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:switchTextAppearance="@style/BlackText"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:background="?selectableItemBackground"
+            android:text="@string/photo_on_wp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/BlackText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/always_location"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_vertical|start"
+                android:layout_toLeftOf="@+id/always_location"
+                android:layout_toStartOf="@+id/always_location"
+                android:gravity="center_vertical"
+                android:text="@string/always_on_location_updates"
+                android:minHeight="?android:attr/listPreferredItemHeight"/>
+
+            <tuev.konstantin.androidrescuer.MultiSelectionSpinner
+                android:id="@+id/always_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                app:idSpin="always_location"
+                app:checkEntries="@array/always_loc_updates"
+                android:minHeight="?android:attr/listPreferredItemHeight">
+
+            </tuev.konstantin.androidrescuer.MultiSelectionSpinner>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/back_cont"
+            style="@style/BlackText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:text="@string/backup_contacts" />
+
+        <Button
+            android:id="@+id/back_folder"
+            style="@style/BlackText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:text="@string/backup_folder" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/BlackText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/sim_action"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_vertical|start"
+                android:gravity="center_vertical"
+                android:minHeight="?android:attr/listPreferredItemHeight"
+                android:text="@string/when_sim_card_is_removed" />
+
+            <tuev.konstantin.androidrescuer.MultiSelectionSpinner
+                android:id="@+id/sim_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                app:checkEntries="@array/sim_remove_actions"
+                app:custom="true"
+                app:idSpin="sim_action"
+                android:minHeight="?android:attr/listPreferredItemHeight">
+
+            </tuev.konstantin.androidrescuer.MultiSelectionSpinner>
+        </RelativeLayout>
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/powermenu_lock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:background="?selectableItemBackground"
+            android:text="@string/power_lock" />
+
+        <Button
+            android:id="@+id/comp_activation"
+            style="@style/BlackText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:text="@string/comp_activation" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/airplane_lock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:background="?selectableItemBackground"
+            android:text="@string/airplane_mode_on_lockscreen" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/statusbar_lock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:text="@string/statusbar_lock" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/wifi_scan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:background="?selectableItemBackground"
+            android:text="@string/open_wifis_send_data" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/logging"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:background="?selectableItemBackground"
+            android:text="@string/logging_to_file" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/security_privacy_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:text="@string/get_privacy_and_security_tips"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:tag="base"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:layout_marginStart="16dp"
+    android:layout_marginLeft="16dp"
+    android:paddingBottom="10dp">
+    <LinearLayout
+        android:id="@+id/notification_header"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:paddingTop="11dp"
+        android:paddingBottom="8dp"
+        android:paddingEnd="16dp"
+        android:paddingRight="16dp"
+        tools:ignore="RtlSymmetry">
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="18dp"
+        android:src="@android:drawable/ic_menu_preferences"
+        android:layout_height="18dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp" />
+    <TextView
+        android:id="@+id/app_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Compat.Notification.Info"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="2dp"
+        android:singleLine="true"
+        android:text="Settings"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="3dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            style="@style/TextAppearance.Compat.Notification.Title"
+            android:text="Settings"
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"/>
+        <TextView
+            style="@style/TextAppearance.Compat.Notification"
+            android:text="Everything is OK!"
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ControlRow">
+        <attr name="text" format="string"/>
+        <attr name="twoOptions" format="boolean"/>
+        <attr name="id" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="MultiSelectionSpinner">
+        <attr name="checkEntries" format="reference"/>
+        <attr name="custom" format="boolean"/>
+        <attr name="idSpin" format="string"/>
+    </declare-styleable>
+</resources>

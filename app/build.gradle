@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+
+    defaultConfig {
+        applicationId "tuev.konstantin.androidrescuer"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path 'CMakeLists.txt'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }
+    packagingOptions {
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+}
+
+ext {
+    supportLibVersion = '27.1.0'
+    servicesLibVersion = '11.8.0'
+}
+
+dependencies {
+    implementation "com.google.firebase:firebase-messaging:$servicesLibVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile "com.klinkerapps:android-chips:1.1.3@aar"
+    testCompile "junit:junit:4.12"
+    compile "com.android.support:appcompat-v7:$supportLibVersion"
+    compile "com.android.support:design:$supportLibVersion"
+    compile "eu.chainfire:libsuperuser:1.0.0.+"
+    compile "com.android.support:support-v4:$supportLibVersion"
+    compile "com.google.android.gms:play-services-maps:$servicesLibVersion"
+    compile "agency.tango.android:material-intro-screen:0.0.5"
+    compile "net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:2.1.0"
+    compile "com.google.android.gms:play-services-location:$servicesLibVersion"
+    compile "me.zhanghai.android.materialprogressbar:library:1.4.1"
+    compile "com.google.code.gson:gson:2.8.2"
+    compile "com.google.android.gms:play-services-drive:$servicesLibVersion"
+    compile "com.google.android.gms:play-services-auth:$servicesLibVersion"
+    compile('com.github.ozodrukh:CircularReveal:2.0.1@aar') {
+        transitive = true;
+    }
+    compile 'com.android.support:multidex:1.0.3'
+    compile 'com.scottyab:secure-preferences-lib:0.1.4'
+    implementation 'com.github.bumptech.glide:glide:4.6.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+}
+
+
+
+apply plugin: 'com.google.gms.google-services'

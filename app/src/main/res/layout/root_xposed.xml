@@ -1,0 +1,70 @@
+<agency.tango.materialintroscreen.parallax.ParallaxLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/slide_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="16dp"
+    android:background="@android:color/transparent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="false"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:background="@color/settings_slide"
+    android:paddingBottom="116dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="48dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:gravity="center"
+        android:id="@+id/comp_root"
+        app:layout_parallaxFactor="0.6" />
+
+    <TextView
+        android:id="@+id/first_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/gr_a_auth"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        app:layout_parallaxFactor="0.5" />
+
+    <TextView
+        android:id="@+id/root_xposed_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/root_comp_desc"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        app:layout_parallaxFactor="0.3" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/check_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check_root"
+        app:layout_parallaxFactor="0.3"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/settings_slide" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/comp_instr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/instruction_how_to_activate_with_computer"
+        android:textColor="@color/settings_slide"
+        app:layout_parallaxFactor="0.2" />
+
+
+</agency.tango.materialintroscreen.parallax.ParallaxLinearLayout>

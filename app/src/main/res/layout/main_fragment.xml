@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <tuev.konstantin.androidrescuer.ControlRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:text="@string/realtimelocation"
+        app:id="realTimeLoc">
+
+    </tuev.konstantin.androidrescuer.ControlRow>
+
+    <tuev.konstantin.androidrescuer.ControlRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:text="@string/pic_on_wrong_pass"
+        app:id="wrongPassPic">
+
+    </tuev.konstantin.androidrescuer.ControlRow>
+
+        <tuev.konstantin.androidrescuer.ControlRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:text="@string/location_on_wrong_pass"
+            app:id="wrongPassLocation">
+
+        </tuev.konstantin.androidrescuer.ControlRow>
+
+    <tuev.konstantin.androidrescuer.ControlRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:text="@string/backup_contacts"
+        app:id="backupContacts"
+        app:twoOptions="true">
+
+    </tuev.konstantin.androidrescuer.ControlRow>
+
+    <tuev.konstantin.androidrescuer.ControlRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:text="@string/backup_folder"
+        app:id="backupFolder"
+        app:twoOptions="true">
+
+    </tuev.konstantin.androidrescuer.ControlRow>
+
+    <tuev.konstantin.androidrescuer.ControlRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:text="@string/factory_reset"
+        app:id="factoryReset"
+        app:twoOptions="true">
+
+    </tuev.konstantin.androidrescuer.ControlRow>
+
+    <tuev.konstantin.androidrescuer.ControlRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:text="@string/delete_internal_storage"
+        app:id="deleteInternal"
+        app:twoOptions="true">
+
+    </tuev.konstantin.androidrescuer.ControlRow>
+
+        <tuev.konstantin.androidrescuer.ControlRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:text="@string/wifi_data"
+            app:id="wifiData">
+
+        </tuev.konstantin.androidrescuer.ControlRow>
+
+        <tuev.konstantin.androidrescuer.ControlRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:text="@string/location"
+            app:id="location">
+
+        </tuev.konstantin.androidrescuer.ControlRow>
+
+        <tuev.konstantin.androidrescuer.ControlRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:text="@string/mobileData"
+            app:id="mobileData">
+
+        </tuev.konstantin.androidrescuer.ControlRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="182dp"/>
+    </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_gravity="end|bottom"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:srcCompat="@drawable/ic_send_white_24dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="68dp" />
+
+</android.support.design.widget.CoordinatorLayout>
